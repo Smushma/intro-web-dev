@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.story-img {
+    width: 100%;
+    height: 500px;
+}
+
+.story-title {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 30px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.story-text {
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.row {
+    display: flex;
+    align-items: stretch;
+}
+
+.story {
+    border: 1px solid #333;
+    padding: 5px;
+}
+
+.quarter {
+    width: 25%;
+    /* flex: 1; */
+}
+
+.half {
+    width: 50%;
+    /* flex: 2; */
+}
+
+.three-quarter {
+    width: 75%;
+    /*flex: 3;*/
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item {
+    /* width: 100%; */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: #555;
+}
+
+.nav-item a:hover {
+    text-decoration: underline;
+}
+
+.nav-item:nth-child(1) { background-color: #ffeaa7; }
+.nav-item:nth-child(2) { background-color: #267758; }
+.nav-item:nth-child(3) { background-color: #471383; }
+.nav-item:nth-child(4) { background-color: #ffa7da; }
+.nav-item:nth-child(5) { background-color: #d81933; }
