@@ -27,9 +27,9 @@
 // server.listen(3000); // you tell the server to actually start up and start listening for requests
 
 // ---USING EXPRESS---
-const express = require("express")
+const express = require("express");
 
-const path = require("path")
+const path = require("path");
 
 const complements = [
     "You like nice today",
@@ -41,35 +41,35 @@ const complements = [
     "I'm really proud of you",
     "You made this",
     "You've learned a lot of things, and that's pretty hard to do"
-]
+];
 
 function getRandomComplement() {
-    const randomIndex = Math.floor(Math.random() * complements.length)
-    return complements[randomIndex]
+    const randomIndex = Math.floor(Math.random() * complements.length);
+    return complements[randomIndex];
 }
 
-const app = express()
+const app = express();
 
 /**
  * Route to particular URL
  * @param req url
  * @param res callback
  */
-app.get("/", function(req, res){
-    // res.end("Welcome to my site!")
-    res.sendFile(path.join(__dirname, "index.html"))
-})
+app.get("/", function(req, res) {
+    // res.end("Welcome to my site!");
+    res.sendFile(path.join(__dirname, "index.html"));
+});
 
 app.get("/complement", function(req, res) {
-    // res.end("You look nice today")
+    // res.end("You look nice today");
     res
     .json({
         complement: getRandomComplement()
     })
-    .end()
+    .end();
 })
 
-app.use("/public", express.static("./public"))
+app.use("/public", express.static("./public"));
 
-app.listen(3000)
-console.log("listening on http://localhost:3000")
+app.listen(3000);
+console.log("listening on http://localhost:3000");
